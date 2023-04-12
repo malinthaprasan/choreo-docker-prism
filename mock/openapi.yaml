@@ -563,6 +563,29 @@ paths:
           description: Invalid username supplied
         '404':
           description: User not found
+  /stores:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  location:
+                    type: string
+                  available:
+                    type: boolean
+                x-examples:
+                  Example 1:
+                    location: Colombo
+                    available: true
+      operationId: get-stores
 components:
   schemas:
     Order:
