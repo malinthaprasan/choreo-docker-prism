@@ -599,6 +599,27 @@ paths:
                     location: Colombo
                     available: true
       operationId: get-stores
+  /test:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hello:
+                    type: string
+                  test:
+                    type: integer
+                x-examples:
+                  Example 1:
+                    hello: world
+                    test: 1
+      operationId: get-test
 components:
   schemas:
     Order:
