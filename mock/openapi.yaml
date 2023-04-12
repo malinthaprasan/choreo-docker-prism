@@ -574,7 +574,15 @@ paths:
             application/json:
               schema:
                 type: object
-                properties: {}
+                properties:
+                  location:
+                    type: string
+                  available:
+                    type: boolean
+                x-examples:
+                  Example 1:
+                    location: Col
+                    available: true
         '201':
           description: Created
           content:
