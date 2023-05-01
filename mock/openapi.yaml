@@ -221,7 +221,6 @@ paths:
         - name: name
           in: query
           description: Name of pet that needs to be updated
-          required: true
           schema:
             type: string
         - name: status
@@ -333,6 +332,8 @@ paths:
                 $ref: '#/components/schemas/Order'
         '405':
           description: Invalid input
+        '400':
+          description: Bad Request
   '/store/order/{orderId}':
     get:
       tags:
